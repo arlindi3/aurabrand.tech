@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://arlindi3.github.io/aura-brand",
+  "homepage": "https://arlindi3.github.io/aurabrand.tech",
   "scripts": {
     "start": "vite",
     "dev": "vite",
