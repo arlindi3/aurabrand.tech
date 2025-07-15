@@ -2,58 +2,156 @@ import React from "react";
 import styles from "../style";
 import Button from "./Button";
 
-const packages = [
+const categories = [
   {
-    id: "basic",
-    name: "Basic Package",
-    price: "180€",
-    period: "",
-    description: "Për biznese të reja ose individuale",
-    features: [
-      "Logo Profesionale",
-      "Website i thjeshtë (one-page)",
-      "Konfigurim Instagram/Facebook",
-      "3 dizajne postimesh",
-      "Bio + copywriting",
+    id: "social-media",
+    name: "Social Media",
+    packages: [
+      {
+        id: "sm-basic",
+        name: "Social Start",
+        price: "129€",
+        period: "",
+        description: "Menaxhim bazik i rrjeteve sociale",
+        features: [
+          "Konfigurim Instagram/Facebook/Tik Tok",
+          "4 dizajne postimesh",
+          "1 Reels",
+          "Bio + copywriting",
+        ],
+        popular: false,
+      },
+      {
+        id: "sm-pro",
+        name: "Engage Pro",
+        price: "249€",
+        period: "",
+        description: "Menaxhim i avancuar për rritje audience",
+        features: [
+          "Konfigurim Instagram/Facebook/Tik Tok",
+          "12 dizajne postimesh",
+          "2 Reels",
+          "Bio + copywriting",
+          "Strategji postimesh",
+        ],
+        popular: true,
+      },
+      {
+        id: "sm-premium",
+        name: "Full Growth",
+        price: "349€",
+        period: "",
+        description: "Menaxhim i plotë & reklamim",
+        features: [
+          "Konfigurim Instagram/Facebook/Tik Tok",
+          "18 dizajne postimesh",
+          "3 Reels",
+          "Bio + copywriting",
+          "Strategji postimesh",
+          "Menaxhim rreklamash",
+          "Video promo profesionale",
+        ],
+        popular: false,
+      },
     ],
-    popular: false,
   },
   {
-    id: "pro",
-    name: "Pro Package",
-    price: "350€",
-    period: "",
-    description: "Për biznese me aktivitet të rregullt",
-    features: [
-      "Logo + identitet vizual",
-      "Website me 4–5 seksione",
-      "SEO bazik",
-      "6 dizajne social media",
-      "Menaxhim rrjetesh sociale (1 muaj)",
-      "Video prezantuese e thjeshtë",
-      "Copywriting bio + captions",
-      "Dizajn broshure + kartvizitë",
+    id: "branding",
+    name: "Logo/Branding dhe Website",
+    packages: [
+      {
+        id: "branding-basic",
+        name: "Brand Start",
+        price: "249€",
+        period: "",
+        description: "Logo dhe website i thjeshtë",
+        features: [
+          "Logo Profesionale",
+          "Website i thjeshtë (one-page)",
+          "Dizajn kartvizitë",
+        ],
+        popular: false,
+      },
+      {
+        id: "branding-pro",
+        name: "Branding Boost",
+        price: "399€",
+        period: "",
+        description: "Identitet vizual & website me seksione",
+        features: [
+          "Logo + identitet vizual + Google Biznes",
+          "Website me 4–5 faqe",
+          "Formë Kontakti",
+          "SEO bazik",
+          "Dizajn broshure + kartvizitë",
+        ],
+        popular: true,
+      },
+      {
+        id: "branding-premium",
+        name: "Brand Identity",
+        price: "649€",
+        period: "",
+        description: "Brandbook & website profesional",
+        features: [
+          "Logo + mini brandbook",
+          "Email Zyrtarë",
+          "Website profesional me SEO & kontakt",
+          "Auditim & optimizim profil online",
+        ],
+        popular: false,
+      },
     ],
-    popular: true,
   },
   {
-    id: "premium",
-    name: "Premium Package",
-    price: "550€",
-    period: "",
-    description: "Për marka që duan rritje të plotë & reklamim",
-    features: [
-      "Logo + mini brandbook",
-      "Website profesional me SEO & kontakt",
-      "8 dizajne social media + strategji mujore",
-      "Menaxhim rrjetesh sociale (1 muaj)",
-      "Fotografi profesionale (10 foto)",
-      "1 video promo profesionale",
-      "Menaxhim reklamash (1 muaj)",
-      "Dizajn broshure + kartvizita",
-      "Auditim & optimizim profil online",
+    id: "full-package",
+    name: "Social Media + Logo/Branding dhe Website",
+    packages: [
+      {
+        id: "full-basic",
+        name: "Starter Combo",
+        price: "379€",
+        period: "",
+        description: "Për fillim të plotë të biznesit",
+        features: [
+          "Logo Profesionale",
+          "Website i thjeshtë",
+          "Konfigurim rrjetesh sociale",
+          "3 dizajne postimesh (1 javë)",
+          "1 video reels (1 javë)",
+        ],
+        popular: false,
+      },
+      {
+        id: "full-pro",
+        name: "Growth Combo",
+        price: "599€",
+        period: "",
+        description: "Për biznese me aktivitet të rregullt",
+        features: [
+          "Logo + identitet vizual",
+          "Website me 4–5 seksione",
+          "2 dizajne postimesh (1 javë)",
+          "2 video reels (1 javë)",
+        ],
+        popular: true,
+      },
+      {
+        id: "full-premium",
+        name: "Full Brand Suite",
+        price: "849€",
+        period: "",
+        description: "Për marka që duan rritje të plotë & reklamim",
+        features: [
+          "Logo + mini brandbook",
+          "Website profesional me SEO & kontakt",
+          "Menaxhim reklamash (1 muaj)",
+          "8 dizajne social media",
+          "Fotografi profesionale (10 foto)",
+        ],
+        popular: false,
+      },
     ],
-    popular: false,
   },
 ];
 
@@ -139,11 +237,33 @@ const Billing = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
-        {packages.map((pkg) => (
-          <PackageCard key={pkg.id} pkg={pkg} />
-        ))}
-      </div>
+      {categories.map((category, categoryIndex) => (
+        <div key={category.id} className="mb-16">
+          <div className="text-center mb-12">
+            <h3
+              className="text-3xl font-bold text-white mb-4"
+              style={{ animationDelay: `${0.6 + categoryIndex * 0.3}s` }}
+            >
+              {category.name}
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start stagger-children">
+            {category.packages.map((pkg, pkgIndex) => (
+              <div
+                key={pkg.id}
+                style={{
+                  animationDelay: `${
+                    0.8 + categoryIndex * 0.3 + pkgIndex * 0.1
+                  }s`,
+                }}
+              >
+                <PackageCard pkg={pkg} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
 
       <div className="text-center mt-12">
         <p className="text-dimWhite text-sm mb-4">

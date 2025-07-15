@@ -1,12 +1,12 @@
 import styles from "../style";
-import { discount, robot } from "../assets";
+import { discount, rocket } from "../assets";
 import GetStarted from "./GetStarted";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}`}
+      className={`flex md:flex-row flex-col ${styles.paddingX} -mt-20 pb-16`}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
@@ -15,7 +15,7 @@ const Hero = () => {
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2`}>
             <span className="text-white">20%</span> Zbritje për{" "}
-            <span className="text-white">1 Muaj</span>
+            <span className="text-white">1 Vit</span>
           </p>
         </div>
         <div className="flex flex-row justify-between items-center w-full">
@@ -32,7 +32,9 @@ const Hero = () => {
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
           tënde
         </h1>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p
+          className={`${styles.paragraph} max-w-[470px] mt-5 animate-fadeInUp delay-800`}
+        >
           Web design | Branding | Social Media | Marketing
         </p>
       </div>
@@ -40,8 +42,8 @@ const Hero = () => {
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <img
-          src={robot}
-          alt="billing"
+          src={rocket}
+          alt="AuraBrand Digital Services"
           className="w-[100%] h-[100%] relative z-[5]"
         />
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />

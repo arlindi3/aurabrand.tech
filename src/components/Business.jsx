@@ -4,15 +4,15 @@ import styles from "../style";
 const services = [
   {
     id: 1,
-    title: "Web Design & Development",
+    title: "Dizajn & Zhvillim Web",
     icon: "🌐",
     description:
-      "Krijojmë website moderne, responsive dhe të shpejtë që përfaqësojnë markën tuaj në mënyrën më të mirë.",
+      "Krijojmë faqe interneti moderne, të përshtatshme për çdo pajisje dhe të shpejta që përfaqësojnë markën tuaj në mënyrën më të mirë.",
     features: [
-      "Responsive Design",
-      "SEO Optimized",
-      "Fast Loading",
-      "Modern UI/UX",
+      "Dizajn i përshtatshëm për çdo pajisje",
+      "Optimizim për SEO",
+      "Ngarkim i shpejtë",
+      "UI/UX modern",
     ],
     color: "from-blue-500 to-cyan-500",
   },
@@ -21,75 +21,75 @@ const services = [
     title: "Logo & Branding",
     icon: "🎨",
     description:
-      "Ndërtojmë identitetin vizual të markës suaj me logo profesionale dhe guideline të plota.",
+      "Ndërtojmë identitetin vizual të markës suaj me logo profesionale dhe udhëzime të plota për brandin.",
     features: [
-      "Logo Design",
-      "Brand Guidelines",
-      "Color Palette",
-      "Typography",
+      "Dizajn Logoje",
+      "Udhëzime për Brandin",
+      "Paletë Ngjyrash",
+      "Tipografi",
     ],
     color: "from-purple-500 to-pink-500",
   },
   {
     id: 3,
-    title: "Social Media Management",
+    title: "Menaxhim Rrjetesh Sociale",
     icon: "📱",
     description:
       "Menaxhojmë rrjetet sociale për të rritur prezencën tuaj online dhe angazhimin me audiencën.",
     features: [
-      "Content Creation",
-      "Post Scheduling",
-      "Analytics",
-      "Community Management",
+      "Krijim Përmbajtjeje",
+      "Planifikim Postimesh",
+      "Analiza",
+      "Menaxhim Komuniteti",
     ],
     color: "from-green-500 to-emerald-500",
   },
   {
     id: 4,
-    title: "Fotografim & Video",
+    title: "Fotografi & Video",
     icon: "📷",
     description:
-      "Shërbime profesionale fotografimi dhe video production për përmbajtje cilësore.",
+      "Shërbime profesionale fotografimi dhe prodhim videosh për përmbajtje cilësore.",
     features: [
-      "Product Photography",
-      "Video Production",
-      "Editing",
-      "Social Media Content",
+      "Fotografi Produktesh",
+      "Prodhim Videosh",
+      "Editim",
+      "Përmbajtje për Rrjetet Sociale",
     ],
     color: "from-orange-500 to-red-500",
   },
   {
     id: 5,
-    title: "SEO & Digital Marketing",
+    title: "SEO & Marketing Dixhital",
     icon: "🔍",
     description:
-      "Optimizojmë website-in tuaj për motorët e kërkimit dhe krijojmë strategji marketingu efektive.",
+      "Optimizojmë faqen tuaj për motorët e kërkimit dhe krijojmë strategji efektive marketingu dixhital.",
     features: [
-      "SEO Optimization",
+      "Optimizim SEO",
       "Google Ads",
-      "Content Marketing",
-      "Analytics",
+      "Marketing Përmbajtjeje",
+      "Analiza",
     ],
     color: "from-yellow-500 to-orange-500",
   },
   {
     id: 6,
-    title: "E-commerce Solutions",
+    title: "Zgjidhje E-commerce",
     icon: "🛒",
     description:
-      "Ndërtojmë dyqane online të plota me sisteme pageash dhe menaxhimi produktesh.",
+      "Ndërtojmë dyqane online të plota me sisteme pagesash dhe menaxhim produktesh.",
     features: [
-      "Online Store",
-      "Payment Gateway",
-      "Inventory Management",
-      "Mobile Optimized",
+      "Dyqan Online",
+      "Sistem Pagesash",
+      "Menaxhim Inventari",
+      "Optimizim për Mobile",
     ],
     color: "from-indigo-500 to-purple-500",
   },
 ];
 
 const ServiceCard = ({ service }) => (
-  <div className="group bg-discount-gradient rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-700 hover:border-secondary/50">
+  <div className="group bg-discount-gradient rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-700 hover:border-secondary/50 hover-lift">
     {/* Icon and Title */}
     <div className="flex items-center mb-6">
       <div
@@ -147,35 +147,28 @@ const Business = () => (
       </div>
       {/* Call to Action */}
       <div className="text-center">
-        <h3 className="text-white text-xl font-bold mb-2">
-          Gati për të filluar projektin tuaj?
-        </h3>
-        <p className="text-dimWhite text-sm mb-4 max-w-md mx-auto">
-          Bashkojuni bizneseve që kanë zgjedhur shërbimet tona.
-        </p>
-        <div className="flex justify-center">
-          <button className="px-6 py-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 text-white font-bold rounded-lg hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Konsultim Falas
-          </button>
-        </div>
-      </div>
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
         <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-2">50+</div>
-          <div className="text-dimWhite">Projekte të Realizuara</div>
+          <h3 className="text-white text-xl font-bold mb-2">
+            Gati për të filluar projektin tuaj?
+          </h3>
+          <p className="text-dimWhite text-sm mb-4 max-w-md mx-auto">
+            Bashkojuni bizneseve që kanë zgjedhur shërbimet tona.
+          </p>
+          <div className="flex justify-center">
+            <button className="px-6 py-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 text-white font-bold rounded-lg hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Konsultim Falas
+            </button>
+          </div>
         </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-2">30+</div>
-          <div className="text-dimWhite">Klientë të Kënaqur</div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-2">24/7</div>
-          <div className="text-dimWhite">Mbështetje</div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-2">100%</div>
-          <div className="text-dimWhite">Kënaqësi</div>
+        <div className="flex flex-wrap gap-12 md:gap-20 lg:gap-32 items-center justify-center pt-8">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">24/7</div>
+            <div className="text-dimWhite">Mbështetje</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">100%</div>
+            <div className="text-dimWhite">Kënaqësi</div>
+          </div>
         </div>
       </div>
     </div>

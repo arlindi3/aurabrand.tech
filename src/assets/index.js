@@ -6,7 +6,8 @@ import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
 import logo from "./AuraBrandLOGO-pabg.png";
 import quotes from "./quotes.svg";
-import robot from "./robot.png";
+import rocket from "./aurabrand-hero.png";
+// import aurabrandHero from "./aurabrand-hero.svg";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -44,7 +45,8 @@ export {
   dropbox,
   logo,
   quotes,
-  robot,
+  rocket,
+  // aurabrandHero,
   send,
   shield,
   star,

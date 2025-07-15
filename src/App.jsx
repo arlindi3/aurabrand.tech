@@ -1,42 +1,22 @@
 import React from "react";
-import {
-  Billing,
-  Business,
-  ContactInfo,
-  Clients,
-  CTA,
-  Footer,
-  Hero,
-  Navbar,
-  Testimonials,
-} from "./components";
-import styles from "./style";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Packages from "./pages/Packages";
+import ClientsPage from "./pages/ClientsPage";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-      </div>
-      <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Hero />
-        </div>
-      </div>
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Business />
-          <Billing />
-          <Testimonials />
-          <ContactInfo />
-          <Clients />
-          {/* <CTA /> */}
-          <Footer />
-        </div>
-      </div>
-    </div>
+    <Router basename="/aurabrand.tech">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sherbimet" element={<Services />} />
+        <Route path="/cmimet" element={<Packages />} />
+        <Route path="/klientet" element={<ClientsPage />} />
+        <Route path="/kontakti" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 };
 

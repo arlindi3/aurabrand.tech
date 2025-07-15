@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../style";
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
@@ -8,14 +9,14 @@ const Footer = () => {
     <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-1 flex flex-col justify-start mr-10 md:mb-0 mb-8">
-          <a href="/">
+          <Link to="/">
             <img
               src={logo}
               alt="logo"
               className="w-[266px] h-[172px] object-contain"
               style={{ cursor: "pointer" }}
             />
-          </a>
+          </Link>
           <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>
             Zgjedhja e duhur për biznese që duan të dallohen. Tek AuraBrand
             bashkojmë kreativitetin, strategjinë dhe teknologjinë për të
@@ -84,16 +85,25 @@ const Footer = () => {
           2025 AuraBrand. Të gjitha të drejtat e rezervuara.
         </p>
         <div className="flex flex-row md:mt-0 mt-6">
-          {socialMedia.map((social, index) => (
-            <img
-              src={social.icon}
-              key={social.id}
-              alt={social.id}
-              className={`w-[21px] h-[21px] object-contain cursor-pointer ${
-                index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-              }`}
-            />
-          ))}
+          {socialMedia.map((social, index) => {
+            return (
+              <a
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={social.id}
+                className={`w-[21px] h-[21px] object-contain cursor-pointer ${
+                  index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+                }`}
+              >
+                <img
+                  src={social.icon}
+                  alt={social.id}
+                  className="w-[21px] h-[21px] object-contain"
+                />
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
